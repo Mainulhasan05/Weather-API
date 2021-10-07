@@ -4,7 +4,15 @@ function getData(){
     var city=document.getElementById('city').value;
 
     fetch('https://api.openweathermap.org/data/2.5/weather?q='+city+'&appid=3bfcd6ea57901b6ce028b6cb6917c8d0&units=metric')
-        .then(res=> res.json())
+        .then(function(response) {
+            // console.log(response.status); // Will show you the status
+            if (!response.ok) {
+                alert("City name not found");
+            }
+            else{
+                return response.json();
+            }            
+        })
         .then(data=>{
             const output=document.getElementById('output');
             // console.log(city);
@@ -14,7 +22,7 @@ function getData(){
             // document.getElementById('details').innerText=city+','+data.sys.country;
             let ans=data.main.temp;
             document.getElementById('temp').innerText='Temp:  '+ans+'℃';
-            console.log(ans);
+            // console.log(ans);
             let x=data.main;
             let temp_max=x.temp_max;
             let temp_min=x.temp_min;
