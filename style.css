@@ -12,9 +12,6 @@ body{
     margin: 20px;
 }
 #city{
-    width: 50%;
-    align-self: center;
-    margin-left: 280px;
     text-align: center;
 }
 #output{
