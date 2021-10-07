@@ -2,7 +2,8 @@
 
 function getData(){
     var city=document.getElementById('city').value;
-
+    document.getElementById('temp').innerText="";
+    document.getElementById('details').innerText="";
     fetch('https://api.openweathermap.org/data/2.5/weather?q='+city+'&appid=3bfcd6ea57901b6ce028b6cb6917c8d0&units=metric')
         .then(function(response) {
             // console.log(response.status); // Will show you the status
