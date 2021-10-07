@@ -11,15 +11,25 @@ function getData(){
             console.log(data.sys.country);
             console.log(data);
             // let s=city+','+
-            document.getElementById('temp').innerText=city+','+data.sys.country;
+            // document.getElementById('details').innerText=city+','+data.sys.country;
             let ans=data.main.temp;
-            document.getElementById('cityName').innerText='Temp: '+ans;
+            document.getElementById('temp').innerText='Temp:  '+ans+'℃';
             console.log(ans);
-            // let p=document.createElement('p');
-            // p.innerText='County: ';
-            // p.style.color='#fff';
-            // output.appendChild(p);
+            let x=data.main;
+            let temp_max=x.temp_max;
+            let temp_min=x.temp_min;
+            let feels_like=x.feels_like;
+            let weather=data.weather[0].main;
 
-            var setOutput=``;
+            var setOutput=
+            `
+             Weather:    ${weather}
+             Feels_like: ${feels_like}℃
+             Temp_min:   ${temp_min}℃
+             Temp_max:   ${temp_max}℃
+             ${city},${data.sys.country} 
+             `;
+            document.getElementById('details').innerText=setOutput;
+            console.log(setOutput);
         })
 }
