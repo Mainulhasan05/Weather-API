@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+body{
+    background-image: url('bc.jpg');
+    height: 100px;
+    background-repeat: no-repeat;
+}
+.container{
+    text-align: center;
+    padding: 100px;
+}
+#submit{
+    margin: 20px;
+}
+#city{
+    width: 50%;
+    align-self: center;
+    margin-left: 280px;
+    text-align: center;
+}
+#output{
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
