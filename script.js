@@ -7,9 +7,9 @@ function getData(){
         .then(res=> res.json())
         .then(data=>{
             const output=document.getElementById('output');
-            console.log(city);
-            console.log(data.sys.country);
-            console.log(data);
+            // console.log(city);
+            // console.log(data.sys.country);
+            // console.log(data);
             // let s=city+','+
             // document.getElementById('details').innerText=city+','+data.sys.country;
             let ans=data.main.temp;
