@@ -3,6 +3,7 @@
 function getData(){
     var city=document.getElementById('city').value;
     var img=document.getElementById('img');
+    img.innerText="";
     document.getElementById('cityName').innerText="";
     document.getElementById('details').innerText="";
     let p=document.getElementById('weather').innerText="";
