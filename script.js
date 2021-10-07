@@ -30,6 +30,6 @@ function getData(){
              ${city},${data.sys.country} 
              `;
             document.getElementById('details').innerText=setOutput;
-            console.log(setOutput);
-        })
+            // console.log(setOutput);
+        });
 }
